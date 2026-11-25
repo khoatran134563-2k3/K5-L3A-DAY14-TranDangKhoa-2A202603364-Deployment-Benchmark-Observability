@@ -74,3 +74,5 @@
 - The student ran both Locust scaling benchmarks and captured Grafana. Codex checked the CSVs and application logs, copied the original evidence to submission folders, transcribed the verified Locust measurements, and started the two CP7 agents. Codex suggested the documented fault injection settings for the student to run.
 
 - Codex inspected the four student screenshots, matched both Jaeger traces to Docker JSON logs, exported Prometheus firing history from the student chaos run, and recorded the verified CP8 measurements. Codex ran separate diagnostics: CP5 static 0/12 and CP7 v2 21/23. These diagnostics are not student benchmark submissions.
+\
+- Codex re-ran the CP5 static checker on the current source (0/12 criteria, 6/24 static subchecks), verified both CP7 health endpoints, and sent a diagnostic POST to the CP1 sample (HTTP success). The student still needs to record their own exercise output.\
