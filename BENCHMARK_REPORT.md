@@ -52,17 +52,20 @@
 
 | Chỉ số | Agent v1 | Agent v2 | Agent v2 (sau khi sửa KB) |
 |---|---|---|---|
-| Accuracy | | | |
-| Avg tokens / câu | | | |
-| Tổng cost (USD) | | | |
-| Cost / câu đúng (USD) | | | |
-| Quality gate | PASS / FAIL | PASS / FAIL | PASS / FAIL |
+| Accuracy | 1/23 (4,35%) | 21/23 (91,30%) | Chưa đo |
+| Avg tokens / câu | 56,4 | 109,1 | Chưa đo |
+| Tổng cost (USD) | 0,000395 | 0,000762 | Chưa đo |
+| Cost / câu đúng (USD) | 0,00039495 | 0,00003627 | Chưa đo |
+| Quality gate | FAIL (ngưỡng 80%) | PASS (ngưỡng 80%, không regression) | Chưa chạy gate 100% |
+
+Baseline do sinh viên chạy. [Eval v1](reports/eval_v1.json) · [Eval v2](reports/eval_v2.json)
 
 **Những câu v2 trả lời sai ban đầu và cách bạn sửa:**
 
 | ID | Keyword bị thiếu | Bạn đã sửa gì |
 |---|---|---|
-| | | |
+| `security-02` | `token`, `hết hạn`, `chữ ký` | Chưa sửa ở bản baseline |
+| `scaling-03` | `cpu`, `memory`, `custom metrics` | Chưa sửa ở bản baseline |
 
 **Nhận xét về trade-off chất lượng / chi phí / latency giữa v1 và v2:**
 
