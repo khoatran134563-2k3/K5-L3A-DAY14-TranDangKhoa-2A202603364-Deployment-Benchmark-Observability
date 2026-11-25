@@ -9,7 +9,7 @@
 
 ### Exercise 1.2: Develop agent output
 
-[Paste your request and response.]
+Codex diagnostic: POST /ask?question=Hello on the develop app returned HTTP 200 and a mock answer. Student exercise output and explanation remain to be added.
 
 ### Exercise 1.3: Comparison table
 | Feature | Develop | Production | Why Important? |
@@ -81,3 +81,5 @@
 - Codex re-ran the CP5 static checker on the current source (0/12 criteria, 6/24 static subchecks), verified both CP7 health endpoints, and sent a diagnostic POST to the CP1 sample (HTTP success). The student still needs to record their own exercise output.
 
 - The student ran CP7 baselines. Codex verified and transcribed the JSON results and identified the two missing knowledge-base topics.
+
+- Codex suggested JWT and HPA entries. The student edited the knowledge base and ran the quality gate. Codex verified the JSON (23/23, no regressions), updated the report, and reran the CP5 static diagnostic (0/12 criteria, 6/24 subchecks).
