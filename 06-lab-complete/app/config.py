@@ -9,7 +9,11 @@ TODO (tiêu chí 9 — Config từ environment variables):
   • Liệt kê đủ các biến này trong .env.example.
 """
 from dataclasses import dataclass
+import os
+from dotenv import load_dotenv
 
+
+load_dotenv(override=False)
 
 @dataclass
 class Settings:
@@ -22,4 +26,9 @@ class Settings:
     daily_budget_usd: float = 1.0
 
 
-settings = Settings()
+
+settings = Settings(
+    port=int(os.getenv("PORT", "8000")),
+    environment=os.getenv("ENVIRONMENT", "development"),
+
+)
