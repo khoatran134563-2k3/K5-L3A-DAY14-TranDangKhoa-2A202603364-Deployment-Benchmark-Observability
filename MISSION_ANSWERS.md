@@ -60,11 +60,15 @@
 ### Exercise 5.1-5.5: Implementation notes
 [Your explanations and test results]
 
+**Codex diagnostic, CP4.** The sample stack ran with three replicas on loopback port 8084. Five `POST /chat` calls in one session reached `instance-917d73`, `instance-c29849`, `instance-cef675`, `instance-917d73`, and `instance-c29849`. `GET /chat/{session_id}/history` returned 10 messages, five user messages and five assistant messages. Student explanation and verification remain to be added.
+
 ## Part 6 — Production readiness
 
 [Paste your own full-check output]
 
 ## AI log
+
+- Codex started the existing CP4 image with a local port override and verified that one Redis-backed session retained its history across three instances. This was a diagnostic run by Codex.
 
 [Record what you asked, what AI suggested, and what you changed and verified.]
 
